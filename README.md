@@ -55,7 +55,7 @@ Socket programming finds applications in various domains, including web developm
 
 ## CODE:
 ## CLIENT:
-'''
+```
 import socket
 from datetime import datetime
 s=socket.socket()
@@ -69,16 +69,16 @@ ack=c.recv(1024).decode()
 if ack:
  print(ack)
 c.close()
-'''
+```
 ## SERVER:
-'''
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 print(s.getsockname())
 print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
-'''
+```
 ## OUTPUT:
 ## CLIENT:
 ![image](https://github.com/ssonuma/SocketStudy/assets/150653312/818677f7-c8f6-4fef-9659-60752f41c46e)
